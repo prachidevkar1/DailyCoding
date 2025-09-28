@@ -256,3 +256,29 @@ class Check {
         }
     }
 }
+
+
+## CALCULATE AVG OF ARRAY ELEMENT
+
+public class ArrayAverageCalculator {
+    public static void main(String args[]) {
+        
+        int[] numbers = {22, 2, 34, 5, 6};
+        int sum = 0;
+        
+    
+        if (numbers.length == 0) {
+            System.out.println("The array is empty. Cannot calculate average.");
+           
+            return;
+        }
+
+        
+        for (int element : numbers) {
+            sum = sum + element; 
+        double average = (double) sum / numbers.length; 
+        
+    
+        System.out.println("The array elements' average is: " + average);
+    }
+}
