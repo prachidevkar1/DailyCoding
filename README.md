@@ -199,3 +199,60 @@ if (s1.indexOf(s2) != -1) {
     System.out.println("No, not substring");
 }
 **indexOf gives starting position; -1 means not found**
+
+
+## CHECK IF GIVEN CHARACTER IS SPECIAL SYM ,LETTER ,DIGIT 
+import java.util.*;
+class Check {
+    public static void main(String args[]){
+        
+     Scanner sc=new Scanner (System.in);  
+    System.out.println("enter any char");
+    char c=sc.next().charAt(0);
+
+    
+    if(Character.isLetter(c))
+    {
+        System.out.println("is a letter");
+    }
+    else if(Character.isDigit(c))
+    {
+        System.out.println("is a digit");
+    }
+    else
+    {
+        System.out.println("is a Special Symbol");
+    }
+    
+    
+}
+}
+
+## Shopping Calculator
+import java.util.*;
+class Check {
+    public static void main(String args[]){
+        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter your shopping amount");
+        double amount =sc.nextDouble();
+        double disc;
+        
+        
+        if(amount>=5000)
+        {
+        disc=amount*0.20;
+     System.out.println("you final amount is " + (amount - disc));
+        }
+        else if(amount>=2000)
+        { 
+             disc=amount*0.10;
+         System.out.println("you final amount is " + (amount - disc));
+        }
+        else
+        {
+            System.out.println("you final amount is" +amount);
+            
+        }
+    }
+}
