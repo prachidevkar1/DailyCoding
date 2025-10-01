@@ -282,3 +282,186 @@ public class ArrayAverageCalculator {
         System.out.println("The array elements' average is: " + average);
     }
 }
+
+
+
+
+## CHECK BALANCED PARENTHESIS
+class BalancedParenthesis{
+    public static void main(String args[])
+    {int count=0;
+        String str="()()))";
+        boolean balanced=false;
+        for(int i=0;i<str.length();i++)
+        {
+            char c=str.charAt(i);
+            if(c=='(')
+            {
+                count++;
+            }
+            else if(c==')')
+            {
+                count--;
+            }
+            if(c<0)
+            {System.out.println("invalid");
+                break;
+            }
+            
+            
+        }
+        
+            if(balanced && count==0)
+            {
+                System.out.println("balanced");
+            }
+            else
+            {
+                System.out.println("not balanced");
+            }
+            
+    }
+}
+
+## FIRST NON REPETED CHARACTER
+public class NonRepeat {
+    public static void main(String[] args) {
+        String str = "swiss";
+        char result = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            
+            if (str.indexOf(c) == str.lastIndexOf(c)) {
+                result = c;
+                break;
+            }
+        }
+
+        if (result != 0) {
+            System.out.println("First non-repeated character: " + result);
+        } else {
+            System.out.println("No non-repeated character found");
+        }
+    }
+}
+
+
+## ALL REPETED AND NON REPEATED
+class NonRepeat {
+    public static void main(String args[]) {
+        String str = "prachii";
+
+        String nonRepeated = "";  // store non-repeated chars
+        String repeated = "";     // store repeated chars
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+
+            // only check first occurrence (to avoid duplicate entries in repeated/non-repeated)
+            if (str.indexOf(c) == i) {
+                if (str.indexOf(c) == str.lastIndexOf(c)) {
+                    nonRepeated += c + " ";
+                } else {
+                    repeated += c + " ";
+                }
+            }
+        }
+
+        System.out.println("Non-repeated characters: " + nonRepeated);
+        System.out.println("Repeated characters: " + repeated);
+    }
+}
+
+ ## PERMUTATION OF STRING
+ public class PermutationsManual {
+    public static void main(String[] args) {
+        String str = "abc";
+        char[] arr = str.toCharArray();
+        permute(arr, 0);
+    }
+
+    static void permute(char[] arr, int start) {
+        if (start == arr.length - 1) {
+            // print current arrangement
+            System.out.println(String.valueOf(arr));
+            return;
+        }
+
+        for (int i = start; i < arr.length; i++) {
+            swap(arr, start, i);          // fix character at 'start'
+            permute(arr, start + 1);      // permute rest
+            swap(arr, start, i);          // backtrack to restore original array
+        }
+    }
+
+    static void swap(char[] arr, int i, int j) {
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+
+## Check if String Contains Only Digits
+public class OnlyDigits {
+    public static void main(String[] args) {
+        String str = "12345";
+        boolean allDigits = true;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                allDigits = false;
+                break;
+            }
+        }
+
+        System.out.println(allDigits);
+    }
+}
+
+ ## Reverse words in a sentence
+
+Example: "I love Java" → "Java love I"
+public class ReverseWords {
+    public static void main(String[] args) {
+        String sentence = "I love Java";
+        String[] words = sentence.split(" "); // split by space
+        String reversed = "";
+
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversed += words[i] + " ";
+        }
+
+        System.out.println(reversed.trim());
+    }
+}
+## Find the longest word in a sentence
+
+Logic:
+
+Split sentence → loop through words → find word with max length.
+public class LongestWord {
+    public static void main(String[] args) {
+        String sentence = "I love programming in Java";
+        String[] words = sentence.split(" ");
+        String longest = "";
+
+        for (String w : words) {
+            if (w.length() > longest.length()) {
+                longest = w;
+            }
+        }
+
+        System.out.println("Longest word: " + longest);
+    }
+}
+
+ ## c) Count number of words
+
+Logic:
+
+Split sentence by space → array length = number of words.
+
+String sentence = "I love Java";
+int count = sentence.split(" ").length;
+System.out.println("Number of words: " + count);
