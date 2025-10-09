@@ -465,3 +465,32 @@ Split sentence by space → array length = number of words.
 String sentence = "I love Java";
 int count = sentence.split(" ").length;
 System.out.println("Number of words: " + count);
+
+
+
+ ## Find the avg of only positive no
+ import java.util.*;
+class Prachi {
+    public static void main(String args[]) {
+        int arr[] = {1, 0, 7, -1, 5, -2, -1};
+        int sum = 0;
+        int count = 0;
+
+        // loop through array
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) { // check positive numbers only
+                sum = sum + arr[i];
+                count++;
+            }
+        }
+
+        // calculate average if there are positive numbers
+        if (count > 0) {
+            double avg = (double) sum / count;  // cast to double to get decimal result
+            System.out.println("Average of positive numbers = " + avg);
+        } else {
+            System.out.println("No positive numbers found");
+        }
+    }
+}
+
