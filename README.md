@@ -494,3 +494,33 @@ class Prachi {
     }
 }
 
+## find negative , positive  and zeros in an array
+
+class FindCategory {
+    public static void main(String args[]) {
+        int positiveCount = 0;
+        int negativeCount = 0;
+        int zeroCount = 0;
+
+        int arr[] = {-2, 8, -9, 7, 5, 0, 2};
+
+        for (int i = 0; i < arr.length; i++) { 
+            if (arr[i] > 0) {
+                System.out.println("Positive number: " + arr[i]);
+                positiveCount++;
+            } else if (arr[i] < 0) {
+                System.out.println("Negative number: " + arr[i]);
+                negativeCount++;
+            } else {
+                System.out.println("Number is zero");
+                zeroCount++;             }
+        }
+
+        System.out.println("\n--- Summary ---");
+        System.out.println("Total Positive numbers: " + positiveCount);
+        System.out.println("Total Negative numbers: " + negativeCount);
+        System.out.println("Total Zeros: " + zeroCount);
+    }
+}
+
+
