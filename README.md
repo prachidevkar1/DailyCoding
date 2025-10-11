@@ -524,3 +524,35 @@ class FindCategory {
 }
 
 
+## Reverse ARRAY
+import java.util.*;
+class Prachi{
+    public static void main(String args[]){
+        int arr[]={3,2,1,9,5};
+        int n=arr.length;
+        int temp=0;
+        
+        for(int i=0;i<n/2;i++)
+        {
+            temp=arr[i];
+            arr[i]= arr[n-1-i];
+            arr[n-1-i]=temp;
+        }
+        System.out.println("reversed array is "+Arrays.toString(arr));
+        
+    }
+}
+
+import java.util.*;
+
+class ReverseArray {
+    public static void main(String[] args) {
+        Integer arr[] = {1, 2, 3, 4, 5}; // Note: must use Integer, not int
+        List<Integer> list = Arrays.asList(arr); // convert array to List
+
+        Collections.reverse(list); // reverse the list
+
+        System.out.println("Reversed array: " + list);
+    }
+}
+
