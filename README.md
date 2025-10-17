@@ -556,3 +556,37 @@ class ReverseArray {
     }
 }
 
+## Collection Framework
+import java.util.*;
+class ListDemo{
+    public static void main(String args[])
+    {
+        List <Integer> list=new ArrayList<>();
+        list.add(18)
+    ;
+    list.add(12);
+    list.add(2);
+    list.add(3);
+    list.add(5);
+    System.out.println(list);
+    
+    list.set(1,99);
+    System.out.println(list);
+   
+    System.out.println( list.get(0));
+    list.remove(4);
+    System.out.println(list);
+    list.remove(Integer.valueOf(2));
+    System.out.println(list);
+    System.out.println("list size ="+list.size());
+    System.out.println("is it contains 20" +list.contains(20));
+    list.clear();
+    System.out.println(list);
+    
+    
+    
+    }
+}
+
+
+
