@@ -607,6 +607,23 @@ public class SwapPairs {
     }
 }
 
-
+## Ways to print Array
+import java.util.*;
+class Patteren{
+    public static void main(String args[])
+    {
+        int arr[]= new int [5];
+        arr[0]=1;
+        arr[1]=2;
+        arr[2]=3;
+ //    for(int num:arr)
+   //  System.out.println(num);
+   // System.out.println(Arrays.toString(arr));
+   for(int i=0;i<5;i++)
+   {
+       System.out.println(arr[i]);
+   }
+    }
+}
 
 
