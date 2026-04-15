@@ -627,3 +627,117 @@ class Patteren{
 }
 
 
+# # Find Second Largest Element
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        for(int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+
+        for(int i = 0; i < size; i++) {
+            if(arr[i] > max) {
+                secondMax = max;
+                max = arr[i];
+            }
+            else if(arr[i] > secondMax && arr[i] != max) {
+                secondMax = arr[i];
+            }
+        }
+
+        System.out.println(secondMax);
+    }
+}
+
+## Count no of element greater than N
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt(); // minimum required charge
+        int size = sc.nextInt(); // number of laptops
+
+        int arr[] = new int[size];
+
+        // input array
+        for(int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int count = 0;
+
+        // logic
+        for(int i = 0; i < size; i++) {
+            if(arr[i] >= n) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
+
+## Count Even Numbers
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int count = 0;
+
+        for(int i = 0; i < n; i++) {
+            if(arr[i] % 2 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
+
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        for(int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int max = arr[0];  // assume first element is max
+
+        for(int i = 1; i < size; i++) {
+            if(arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        System.out.println(max);
+    }
+}
+
