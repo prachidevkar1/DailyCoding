@@ -741,3 +741,97 @@ class Main {
     }
 }
 
+
+## Count Consonants from String
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        int count = 0;
+
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+
+                if(ch!='a' && ch!='e' && ch!='i' && ch!='o' && ch!='u' &&
+                   ch!='A' && ch!='E' && ch!='I' && ch!='O' && ch!='U') {
+                    count++;
+                }
+            }
+        }
+
+        System.out.println(count);
+    }
+}
+
+
+## Count vowels from String
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        
+        int count = 0;
+
+        for(int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||
+               ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
+
+## Reverse String 
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        String rev = "";
+
+        for(int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+
+        System.out.println(rev);
+    }
+}
+
+
+## Simple Program to Remove Vowels
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        String result = "";
+
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if(ch!='a' && ch!='e' && ch!='i' && ch!='o' && ch!='u' &&
+               ch!='A' && ch!='E' && ch!='I' && ch!='O' && ch!='U') {
+                result = result + ch;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+
+
