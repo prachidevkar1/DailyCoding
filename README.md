@@ -857,3 +857,164 @@ class Main {
 }
 
 
+## Longest Substring Without Repeating Characters
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        int max = 0;
+
+        for(int i = 0; i < str.length(); i++) {
+            String temp = "";
+
+            for(int j = i; j < str.length(); j++) {
+                char ch = str.charAt(j);
+
+                if(temp.indexOf(ch) != -1) {
+                    break;
+                }
+
+                temp = temp + ch;
+
+                if(temp.length() > max) {
+                    max = temp.length();
+                }
+            }
+        }
+
+        System.out.println(max);
+    }
+}
+
+
+## Print First Unique Substring Only
+
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        String temp = "";
+
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if(temp.indexOf(ch) == -1) {
+                temp = temp + ch;
+            } else {
+                break;
+            }
+        }
+
+        System.out.println(temp);
+    }
+}
+
+## Print All Substrings Without Repeated Characters
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        for(int i = 0; i < str.length(); i++) {
+            String temp = "";
+
+            for(int j = i; j < str.length(); j++) {
+                char ch = str.charAt(j);
+
+                if(temp.indexOf(ch) != -1) {
+                    break;
+                }
+
+                temp = temp + ch;
+                System.out.println(temp);
+            }
+        }
+    }
+}
+
+
+## Maximum Sum Subarray of Size K
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int sum = 0;
+
+        for(int i = 0; i < k; i++) {
+            sum += arr[i];
+        }
+
+        int max = sum;
+
+        for(int i = k; i < n; i++) {
+            sum = sum + arr[i] - arr[i-k];
+
+            if(sum > max) {
+                max = sum;
+            }
+        }
+
+        System.out.println(max);
+    }
+}
+
+## Pair With Given Sum (Two Pointer) 
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int target = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int left = 0;
+        int right = n - 1;
+        boolean found = false;
+
+        while(left < right) {
+            int sum = arr[left] + arr[right];
+
+            if(sum == target) {
+                System.out.println(arr[left] + " " + arr[right]);
+                found = true;
+                break;
+            }
+            else if(sum < target) {
+                left++;
+            }
+            else {
+                right--;
+            }
+        }
+
+        if(found == false) {
+            System.out.println("No Pair Found");
+        }
+    }
+}
